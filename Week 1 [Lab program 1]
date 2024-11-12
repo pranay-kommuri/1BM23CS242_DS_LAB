@@ -60,3 +60,68 @@ int main(){
 }
         return (0);
 }
+
+OUTPUT:-
+1.push
+2.pop
+3.display
+4.exit
+Enter your choice : 1
+Enter element to push : 2
+1.push
+2.pop
+3.display
+4.exit
+Enter your choice : 1
+Enter element to push : 6
+1.push
+2.pop
+3.display
+4.exit
+Enter your choice : 1
+Enter element to push : 8
+1.push
+2.pop
+3.display
+4.exit
+Enter your choice : 1
+Enter element to push : 9
+1.push
+2.pop
+3.display
+4.exit
+Enter your choice : 1
+Enter element to push : 5
+1.push
+2.pop
+3.display
+4.exit
+Enter your choice : 1
+Enter element to push : 7
+Stack overflowing unable to push 71.push
+2.pop
+3.display
+4.exit
+Enter your choice : 2
+ 5 poped from stack1.push
+2.pop
+3.display
+4.exit
+Enter your choice : 2
+ 5 poped from stack1.push
+2.pop
+3.display
+4.exit
+Enter your choice : 2
+ 5 poped from stack1.push
+2.pop
+3.display
+4.exit
+Enter your choice : 3
+Stack element :5 9 8 6 2 1.push
+2.pop
+3.display
+4.exit
+Enter your choice : 4
+
+=== Code Execution Successful ===

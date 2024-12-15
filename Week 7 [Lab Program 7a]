@@ -1,0 +1,97 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    int data;
+    struct Node* left;
+    struct Node* right;
+};
+
+struct Node* createNode(int data) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = data;
+    newNode->left = newNode->right = NULL;
+    return newNode;
+}
+
+struct Node* insert(struct Node* root, int data) {
+    if (root == NULL) {
+        return createNode(data);
+    }
+    
+    if (data < root->data) {
+        root->left = insert(root->left, data);
+    } else {
+        root->right = insert(root->right, data);
+    }
+    
+    return root;
+}
+
+void inOrderTraversal(struct Node* root) {
+    if (root != NULL) {
+        inOrderTraversal(root->left);
+        printf("%d ", root->data);
+        inOrderTraversal(root->right);
+    }
+}
+
+void preOrderTraversal(struct Node* root) {
+    if (root != NULL) {
+        printf("%d ", root->data);
+        preOrderTraversal(root->left);
+        preOrderTraversal(root->right);
+    }
+}
+
+void postOrderTraversal(struct Node* root) {
+    if (root != NULL) {
+        postOrderTraversal(root->left);
+        postOrderTraversal(root->right);
+        printf("%d ", root->data);
+    }
+}
+
+void displayTree(struct Node* root) {
+    printf("In-order Traversal: ");
+    inOrderTraversal(root);
+    printf("\n");
+    
+    printf("Pre-order Traversal: ");
+    preOrderTraversal(root);
+    printf("\n");
+    
+    printf("Post-order Traversal: ");
+    postOrderTraversal(root);
+    printf("\n");
+}
+
+int main() {
+    struct Node* root = NULL;
+    int n, data;
+    printf("Enter the number of elements to insert in the binary search tree:\n ");
+    scanf("%d", &n);
+    printf("Enter the elements to insert into the tree:\n");
+    for (int i = 0; i < n; i++) {
+        printf("Enter element %d: ", i + 1);
+        scanf("%d", &data);
+        root = insert(root, data);
+    }
+    displayTree(root);
+
+    return 0;
+}
+
+
+OUTPUT:
+Enter the number of elements to insert in the binary search tree:
+5
+Enter the elements to insert into the tree:
+30
+20
+10
+8
+9
+In-order Traversal: 8 9 10 20 30
+Pre-order Traversal: 30 20 10 8 9
+Post-order Traversal: 9 8 10 20 30

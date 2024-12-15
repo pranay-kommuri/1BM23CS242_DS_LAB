@@ -1,1 +1,40 @@
+struct ListNode {
+    int val;
+    struct ListNode* next;
+};
 
+bool isPalindrome(struct ListNode* head) {
+    if (!head || !head->next) return true;
+
+    struct ListNode* slow = head;
+    struct ListNode* fast = head;
+
+    while (fast && fast->next) {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+
+    struct ListNode* prev = NULL;
+    while (slow) {
+        struct ListNode* nextTemp = slow->next;
+        slow->next = prev;
+        prev = slow;
+        slow = nextTemp;
+    }
+
+    struct ListNode* firstHalf = head;
+    struct ListNode* secondHalf = prev;
+    while (secondHalf) {
+        if (firstHalf->val != secondHalf->val) return false;
+        firstHalf = firstHalf->next;
+        secondHalf = secondHalf->next;
+    }
+    return true;
+}
+
+OUTPUT:
+Input: head = [1,2,2,1]
+Output: true
+
+Input: head = [1,2]
+Output: false

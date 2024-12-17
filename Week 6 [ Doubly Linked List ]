@@ -104,19 +104,3 @@ int main() {
     return 0;
 }
 
-
-OUTPUT:
-Initial list:
-List contents: 10 20 30 
-
-List after inserting 15 to the left of 20:
-List contents: 10 15 20 30 
-
-List after deleting node with value 20:
-List contents: 10 15 30 
-
-Node with value 100 not found.
-
-List after attempting to delete node with value 100:
-List contents: 10 15 30 
-

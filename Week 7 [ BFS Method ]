@@ -96,13 +96,3 @@ int main() {
 }
 
 
-OUTPUT:
-Enter the number of vertices in the graph: 5
-Enter the adjacency matrix (enter 1 if there's an edge, otherwise 0):
-0 1 0 0 1
-1 0 1 0 0
-0 1 0 1 0
-0 0 1 0 1
-1 0 0 1 0
-Enter the starting vertex (0 to 4): 0
-BFS Traversal: 0 1 4 2 3

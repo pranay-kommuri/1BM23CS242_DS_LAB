@@ -105,18 +105,3 @@ int main() {
 
     return 0;
 }
-
-OUTPUT:-
-Pushed 10 to stack
-Pushed 20 to stack
-Pushed 30 to stack
-Stack: 30 -> 20 -> 10 -> NULL
-Popped 30 from stack
-Stack: 20 -> 10 -> NULL
-
-Enqueued 40 to queue
-Enqueued 50 to queue
-Enqueued 60 to queue
-Queue: 40 -> 50 -> 60 -> NULL
-Dequeued 40 from queue
-Queue: 50 -> 60 -> NULL

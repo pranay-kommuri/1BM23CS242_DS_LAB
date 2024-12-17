@@ -82,16 +82,3 @@ int main() {
     return 0;
 }
 
-
-OUTPUT:
-Enter the number of elements to insert in the binary search tree:
-5
-Enter the elements to insert into the tree:
-30
-20
-10
-8
-9
-In-order Traversal: 8 9 10 20 30
-Pre-order Traversal: 30 20 10 8 9
-Post-order Traversal: 9 8 10 20 30

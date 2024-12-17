@@ -81,8 +81,3 @@ int main() {
 
     return 0;
 }
-
-OUTPUT:-
-Enter infix expression: A+B*(C+D)-E/F
-Postfix Expression: ABCD+*+EF/-
-
